@@ -7,14 +7,7 @@ This repository contains development notes, logs, and screenshots related to mul
 
 ---
 
-## 📁 Folder Structure
-2025-05/
-├── 2025-05-28/
-│ └── Screenshot-2025-05-28-runtime-error.png
-├── 2025-05-29/
-│ └── Screenshot-2025-05-29-mdx-build-error.png
-├── 2025-05-31/
-│ └── Screenshot-2025-05-31-terminal-zshrc.png
+<pre><code>## 📁 Folder Structure <details> <summary>2025-05/</summary> ``` 2025-05/ ├── 2025-05-28/ │ └── Screenshot-2025-05-28-runtime-error.png ├── 2025-05-29/ │ └── Screenshot-2025-05-29-mdx-build-error.png ├── 2025-05-31/ │ └── Screenshot-2025-05-31-terminal-zshrc.png ``` </details> </code></pre> 
 
 ---
 
