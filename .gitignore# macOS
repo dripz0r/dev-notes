@@ -1,0 +1,19 @@
+.DS_Store
+
+# Archives
+*.zip
+*.tar.gz
+
+# Logs
+*.log
+
+# Node & build (just in case)
+node_modules/
+dist/
+.next/
+out/
+.env*
+
+# (Optional) Screenshots (if storing externally)
+# screenshots/
+
