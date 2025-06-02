@@ -7,7 +7,54 @@ This repository contains development notes, logs, and screenshots related to mul
 
 ---
 
-<pre><code>## 📁 Folder Structure <details> <summary>2025-05/</summary> ``` 2025-05/ ├── 2025-05-28/ │ └── Screenshot-2025-05-28-runtime-error.png ├── 2025-05-29/ │ └── Screenshot-2025-05-29-mdx-build-error.png ├── 2025-05-31/ │ └── Screenshot-2025-05-31-terminal-zshrc.png ``` </details> </code></pre> 
+## 📁 Folder Structure
+
+Each folder under `dev-notes/YYYY-MM/DD/` may contain:
+- Screenshots
+- `log.md` with timestamped Git commit entries
+- `note.md` for detailed developer notes
+- `summary.md` for daily digests (optional)
+
+---
+
+## 🧠 Scripts
+
+### 🧾 log-commit-to-devnotes.js
+Logs the latest Git commit into `dev-notes/YYYY-MM/DD/log.md`, grouped by time of day.
+Includes:
+- Timestamp
+- Git commit hash
+- Commit message
+- Branch name
+- Files changed
+
+**Usage:**
+```bash
+node nodejs-scripts/log-commit-to-devnotes.js
+```
+Or hook it to Git:
+```bash
+# Inside .git/hooks/post-commit
+node ~/projects/dev-notes/nodejs-scripts/log-commit-to-devnotes.js
+```
+
+---
+
+### 🖼 organize-screenshots.js
+Sorts screenshots from `~/Desktop/dev-progress/screenshots` into the correct day folder in `dev-notes/`, based on creation timestamp.
+Automatically renames files as:
+```
+screenshot-HH-MM-SS-AMPM.png
+```
+
+**Usage:**
+```bash
+node nodejs-scripts/organize-screenshots.js
+```
+Or use the alias if set:
+```bash
+ssort
+```
 
 ---
 
@@ -17,12 +64,11 @@ Each folder corresponds to a day (`YYYY-MM-DD`) and may contain:
 - Screenshots
 - `.md` logs
 - Notes on bugs, fixes, and progress
-- Ideas and todos
+- Ideas and to-dos
 
 ---
 
-## 🧰 Useful Commands
-
+## 💻 Useful Commands
 ```bash
 # Add and commit a daily log
 git add .
@@ -36,21 +82,8 @@ git push -u origin main
 
 ---
 
-## 🤖 Future Plans
-Add dev-log-template.md
-
-Organize folders monthly
-
-Add AI auto-log features using OpenAI
-
----
-
-## ✅ File 2: `dev-log-template.md`
-
-### 📄 Location: 
-~/stealth1/projects/dev-notes/dev-log-template.md
-
-### 📥 Create the File
-```bash
-touch dev-log-template.md
-``` 
+## 📅 Future Plans
+- Add `summary.md` generator
+- Optionally sync with Notion or GitHub Issues
+- Weekly rollups
+- GitHub Action version of `log-commit`
